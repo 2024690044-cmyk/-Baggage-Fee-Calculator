@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF5FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <!-- AIRPLANE HERO IMAGE -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="179dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Airplane above the clouds"
+                android:scaleType="centerCrop"
+                android:src="@drawable/airplane_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66102D59" />
+
+            <!-- HERO TEXT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="177dp"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.12"
+                    android:text="✈  TRAVEL SMART"
+                    android:textColor="#D6E9FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Baggage Fee\nCalculator"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Know your baggage cost before you fly."
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- TOP NAVIGATION ON IMAGE -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingEnd="12dp">
+
+                <TextView
+                    android:id="@+id/btnAbout"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="ⓘ"
+                    android:textColor="#FFFFFF"
+                    android:textSize="25sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="About" />
+
+                <ImageView
+                    android:id="@+id/btnShare"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="11dp"
+                    android:src="@drawable/ic_share"
+                    app:tint="#FFFFFF"
+                    android:contentDescription="Share"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- WELCOME SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, Traveller! 👋"
+                    android:textColor="#173B70"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Pack smart. Travel with confidence."
+                    android:textColor="#70839D"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:contentDescription="Travel luggage"
+                android:scaleType="fitCenter"
+                android:src="@drawable/luggage" />
+
+        </LinearLayout>
+
+        <!-- CALCULATOR CARD -->
+        <LinearLayout
+            android:id="@+id/calculatorSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calculate your fee"
+                android:textColor="#173B70"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="22dp"
+                android:text="Enter your baggage details below."
+                android:textColor="#8291A6"
+                android:textSize="13sp" />
+
+            <!-- WEIGHT -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🧳  BAGGAGE WEIGHT"
+                android:textColor="#345273"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#75A9E8"
+                android:hint="Enter weight in kg"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:textColor="#173B70"
+                android:textColorHint="#9AA9BC" />
+
+            <!-- TICKET CLASS -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✈  CHOOSE YOUR TICKET CLASS"
+                android:textColor="#345273"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgTicketClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbEconomy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:buttonTint="#2878D0"
+                    android:text="✈  Economy  —  20 kg allowance"
+                    android:textColor="#345273"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:buttonTint="#2878D0"
+                    android:text="♛  Business  —  40 kg allowance"
+                    android:textColor="#345273" />
+
+            </RadioGroup>
+
+            <!-- RATE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💳  RATE PER EXTRA KG (RM)"
+                android:textColor="#345273"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etRate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="#75A9E8"
+                android:hint="e.g. 5.00"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:singleLine="true"
+                android:textColor="#173B70"
+                android:textColorHint="#9AA9BC" />
+
+            <!-- CALCULATE BUTTON -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:backgroundTint="#1764B0"
+                android:text="Calculate My Fee"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
